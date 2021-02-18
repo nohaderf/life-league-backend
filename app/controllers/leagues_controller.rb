@@ -1,7 +1,7 @@
 class LeaguesController < ApplicationController
 
     def index 
-        Leagues = League.all
+        leagues = League.all
         render json: leagues
     end
 
@@ -23,7 +23,7 @@ class LeaguesController < ApplicationController
 
     private
 
-    def workout_exercise_params
+    def league_params
         params.permit(:name, :notes, :duration)
     end
 
